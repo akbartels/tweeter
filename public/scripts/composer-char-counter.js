@@ -4,7 +4,10 @@ $(document).ready(function() {
   console.log('jQuery ready')
 });
 
+
+
 const $textField = $('.tweet-field');
+
 const $counter = $('.counter')
 
 $textField.keyup(function () {

@@ -6,14 +6,18 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet">
-    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
     
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -25,38 +29,57 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter app</span>
+    <nav class="nav-bar">
+      <span class="app-name">tweeter</span>
+      <span class="write-new">Write a new tweet</span>
     </nav>
-    <header>
+    <header class="page">
       <div>
-          <img class="user"src="/images/profile-hex.png"> 
+          <img class="user-img"src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2 class="user">Your Name</h2>
+          <h2 class="user-name">Your Name</h2>
       </div>
-  </header>
+    </header>
     
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form>
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea class="tweet-field" name="text" id="tweet-text"></textarea>
+        <form class="tweet-form">
+          <!-- <label for="tweet-text">What are you humming about?</label> -->
+          <textarea class="tweet-field" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <button class="button" type="submit">Tweet</button>
           <output name="counter" class="counter over" for="tweet-text">140</output>
         </form>
       </section>
-      <p>Integer ut felis egestas, ullamcorper lectus vitae, imperdiet neque. Integer non sapien id diam pharetra condimentum. Vivamus accumsan efficitur sapien, at vehicula risus euismod vel. Pellentesque lobortis lorem tempus, fringilla risus id, viverra felis. Donec eleifend leo a augue facilisis, sed auctor nunc consectetur. Vestibulum sed augue laoreet, suscipit tortor non, ultrices mi. Suspendisse potenti. Curabitur in egestas ante. Nullam vitae nibh lacinia, feugiat tellus id, vehicula velit. Sed molestie non libero in tempor.</p>
-      <p>Integer ut felis egestas, ullamcorper lectus vitae, imperdiet neque. Integer non sapien id diam pharetra condimentum. Vivamus accumsan efficitur sapien, at vehicula risus euismod vel. Pellentesque lobortis lorem tempus, fringilla risus id, viverra felis. Donec eleifend leo a augue facilisis, sed auctor nunc consectetur. Vestibulum sed augue laoreet, suscipit tortor non, ultrices mi. Suspendisse potenti. Curabitur in egestas ante. Nullam vitae nibh lacinia, feugiat tellus id, vehicula velit. Sed molestie non libero in tempor.</p>
-      <p>Integer ut felis egestas, ullamcorper lectus vitae, imperdiet neque. Integer non sapien id diam pharetra condimentum. Vivamus accumsan efficitur sapien, at vehicula risus euismod vel. Pellentesque lobortis lorem tempus, fringilla risus id, viverra felis. Donec eleifend leo a augue facilisis, sed auctor nunc consectetur. Vestibulum sed augue laoreet, suscipit tortor non, ultrices mi. Suspendisse potenti. Curabitur in egestas ante. Nullam vitae nibh lacinia, feugiat tellus id, vehicula velit. Sed molestie non libero in tempor.</p>
-      <p>Integer ut felis egestas, ullamcorper lectus vitae, imperdiet neque. Integer non sapien id diam pharetra condimentum. Vivamus accumsan efficitur sapien, at vehicula risus euismod vel. Pellentesque lobortis lorem tempus, fringilla risus id, viverra felis. Donec eleifend leo a augue facilisis, sed auctor nunc consectetur. Vestibulum sed augue laoreet, suscipit tortor non, ultrices mi. Suspendisse potenti. Curabitur in egestas ante. Nullam vitae nibh lacinia, feugiat tellus id, vehicula velit. Sed molestie non libero in tempor.</p>
-      <p>Integer ut felis egestas, ullamcorper lectus vitae, imperdiet neque. Integer non sapien id diam pharetra condimentum. Vivamus accumsan efficitur sapien, at vehicula risus euismod vel. Pellentesque lobortis lorem tempus, fringilla risus id, viverra felis. Donec eleifend leo a augue facilisis, sed auctor nunc consectetur. Vestibulum sed augue laoreet, suscipit tortor non, ultrices mi. Suspendisse potenti. Curabitur in egestas ante. Nullam vitae nibh lacinia, feugiat tellus id, vehicula velit. Sed molestie non libero in tempor.</p>
-
+      <article class="tweet-body hover-tweet">
+        <header class="tweet-header">
+          <!-- using below image for styling.. need to delete -->
+          <div class="tweet-left">
+            <img class="tweet-img" src="https://i.imgur.com/nlhLi3I.png">
+            <p class="tweet-name">Sally Field</p>
+          </div>
+          <p class="tweet-right hover-tweet">@sallyField</p>
+        </header>
+        <section class="tweet-content">
+          <p class="tweet">This is a super inspirational quote by the great Sally Field.</p>
+        </section>
+        <footer class="tweet-footer">
+          <p class="tweet-date">10 days ago</p>
+          <div class="tweet-icons">
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="fas fa-heart"></i>
+          </div>
+          
+        </footer>
+      </article>
+      
+  
     </main>
+    <footer class="page">Page footer</footer>
     <script src="scripts/composer-char-counter.js"></script>
   </body>
 </html>

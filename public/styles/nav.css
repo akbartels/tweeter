@@ -1,19 +1,26 @@
 
-body nav {
+.nav-bar {
   color: white;
   background-color: #4056A1;
   position: fixed;
   width: 100%;
   height: 120px;
   top: 0;
-  padding-top: 1.5em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  padding-bottom: 1.5em;
+  padding: 1.5em;
   z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-body nav span {
+.app-name {
   font-family: bungee;
+  font-weight: 300;
+  font-size: xxx-large;
+}
+
+.write-new {
+  justify-self: flex-end;
+  height: fit-content;
   font-weight: 300;
 }
