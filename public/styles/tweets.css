@@ -7,7 +7,7 @@
   border-style: solid;
   border-width: 3px;
   position: relative;
-
+  margin: 40px 0px;
   transition: all 0.3s ease-in;
 }
 
