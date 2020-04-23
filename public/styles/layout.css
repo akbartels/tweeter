@@ -3,6 +3,9 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+
+ /* >>> Mobile Styles <<< */
 html {
   box-sizing: border-box;
 }
@@ -15,6 +18,8 @@ html {
  */
 
 body {
+  display: flex;
+  flex-direction: column;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -27,7 +32,32 @@ body {
  */
 
  main {
+  display: flex;
+  flex-direction: column;
   width: 90%;
   margin: auto;
+  position: relative;
+  top: 143px;
+ }
+
+
+ /* >>> Tablet/Desktop Styles <<< */
+ @media only screen and (min-width: 1024px) {
+  
+  body {
+    flex-direction: row;
+  }
+  
+  main {
+    margin: 2%;
+    justify-content: flex-end;
+  }
+
+  header.page {
+
+  }
+
+  
+
  }
  

@@ -115,7 +115,7 @@ $(document).ready(function() {
     const $alertMsg = $('.alert-msg')
     
     if ($counter === 140) {
-      const noText = "Oops! You didn't add your message!"
+      const noText = 'Oops! You forgot to write a message!'
       $alertMsg.text(`${noText}`)
       $tweetAlert.slideDown('slow').delay(3000).slideUp('slow')
       
@@ -123,7 +123,7 @@ $(document).ready(function() {
       // alert("Oops! You didn't add your message! ");
       return;
     } else if ($counter < 0) {
-      const overLmt = "Oops! You went over the character limit!"
+      const overLmt = 'Oops! You went over the character limit!'
       $alertMsg.text(`${overLmt}`)
       $tweetAlert.slideDown('slow').delay(3000).slideUp('slow')
       
