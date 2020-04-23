@@ -49,11 +49,15 @@
     <main class="container">
       <section class="new-tweet">
         <form class="tweet-form">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
+          <div class="tweet-alert hidden">
+            <i class="fas fa-exclamation"></i>
+            <p class="alert-msg">Oops! You didn't add your message!</p>
+          </div>
           <textarea class="tweet-field" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <button class="button" type="submit">Tweet</button>
           <!-- Counter is adjusted in composer-char-counter.js -->
           <output name="counter" class="counter over" for="tweet-text">140</output>
+          
         </form>
       </section>
     <section id="tweets-container">

@@ -102,6 +102,8 @@ $(document).ready(function() {
   }
  
 
+
+
 // jQuery AJAX POST request
   $('.tweet-form').submit(function(event) {
     event.preventDefault();
@@ -109,12 +111,23 @@ $(document).ready(function() {
 
     // const $textField = $('.tweet-field');
     const $counter = Number($('.counter')[0].innerText);
+    const $tweetAlert = $('.tweet-alert')
+    const $alertMsg = $('.alert-msg')
     
     if ($counter === 140) {
-      alert("😅 Oops! You didn't add your message! \n\nWhat are you humming about?");
+      const noText = "Oops! You didn't add your message!"
+      $alertMsg.text(`${noText}`)
+      $tweetAlert.slideDown('slow').delay(3000).slideUp('slow')
+      
+      
+      // alert("Oops! You didn't add your message! ");
       return;
     } else if ($counter < 0) {
-      alert("😩 Oops! You went over the 140 character limit. \n\nRemove some text and try again.");
+      const overLmt = "Oops! You went over the character limit!"
+      $alertMsg.text(`${overLmt}`)
+      $tweetAlert.slideDown('slow').delay(3000).slideUp('slow')
+      
+      
       return;
     } 
 
