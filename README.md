@@ -25,3 +25,8 @@ I hope you like it :)
 
 - Express
 - Node 5.10.x or above
+- Body-Parser
+- Chance
+- Md 5
+
+
