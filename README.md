@@ -8,6 +8,12 @@ I enjoyed having the chance to let my creative juices flow in this project and c
 
 I hope you like it :)
 
+## Screenshots
+!["Desktop view - over character limit"](https://github.com/akbartels/tweeter/blob/master/docs/Desktop_View_Over_Character_Limit.png?raw=true)
+!["Desktop view with composer visible"](https://github.com/akbartels/tweeter/blob/master/docs/Desktop_View_with_Composer.png?raw=true)
+!["Mobile/Tablet view with composer hidden"](https://github.com/akbartels/tweeter/blob/master/docs/Mobile_Tablet_View_Composer_Hidden.png?raw=true)
+!["Mobile/Tablet view with text in composer"](https://github.com/akbartels/tweeter/blob/master/docs/Mobile_Tablet_View_with_Text.png?raw=true)
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
