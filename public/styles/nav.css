@@ -4,12 +4,13 @@
   color: white;
   background-color: #e09200;
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
+  /* background-color: transparent; */
   position: fixed;
   width: 100%;
   height: 120px;
   top: 0;
   padding: 1.5em;
-  z-index: 5;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,18 +20,56 @@
   font-family: bungee;
   font-weight: 300;
   font-size: xxx-large;
+  position: relative;
+  z-index: 5;
 }
 
 .write-new {
-  justify-self: flex-end;
+  position: relative;
+  z-index: 5;
   height: fit-content;
-  font-weight: 300;
+  font-weight: 600;
+  font-size: medium;
+  justify-content: center;
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
 }
+
+.write-new:focus {
+  outline: 0;
+}
+
+.write-new-text {
+  margin: 0 0 4px 0;
+}
+
+
+#down-arrw-icon {
+  color: #f53220;
+  font-size: x-large;
+  -moz-transition: transform .5s;
+  -webkit-transition: transform .5s;
+  transition: transform .5s;
+}
+
+.flip {
+  transform: rotate(-180deg);
+}
+
+.write-new:hover #down-arrw-icon {
+  color: #8f0c00;
+  font-size: x-large;
+}
+
 
 @media only screen and (min-width: 1024px) {
   .nav-bar {
   background-color: #4056A1;
   background-image: none;
+  
   }
 
   .nav-div {
@@ -41,5 +80,6 @@
     position: fixed;
     background-color: #f4f1ec;
   }
+
   
 }

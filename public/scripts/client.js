@@ -6,43 +6,6 @@
 
 $(document).ready(function() {
   
-  // HARD CODED DATA FOR TESTING
-  // const tweetData =   {
-  //   "user": {
-  //     "name": "Newton",
-  //     "avatars": "https://i.imgur.com/73hZDYK.png",
-  //       "handle": "@SirIsaac"
-  //     },
-  //   "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //   "created_at": 1461116232227
-  // }
-
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": "https://i.imgur.com/73hZDYK.png"
-  //       ,
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 1461116232227
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //       "handle": "@rd" },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1461113959088
-  //   }
-  // ];
 
   // HELPER FUNCTIONS TO CREATE A TWEET AND RENDER ON PAGE
  
@@ -62,7 +25,6 @@ $(document).ready(function() {
     }
   };
 
-  
   const createTweetElement = function(tweetObj) {
     const tweetUser = tweetObj.user
     const tweetContent = tweetObj.content 
@@ -102,15 +64,11 @@ $(document).ready(function() {
     .then(renderTweets)
   }
  
-
-
-
 // jQuery AJAX POST request
   $('.tweet-form').submit(function(event) {
     event.preventDefault();
     const formData = $(this).serialize();
 
-    // const $textField = $('.tweet-field');
     const $counter = Number($('.counter')[0].innerText);
     const $tweetAlert = $('.tweet-alert')
     const $alertMsg = $('.alert-msg')
@@ -137,14 +95,23 @@ $(document).ready(function() {
       $(this)[0].reset();
       loadTweets();
     })
-    
-    
-    
-    
-
-    // .catch(err => console.log('error >', err))
   })
-  
+
+  // Compose new tweet  
+  $('.write-new').click(function() {
+    $('.tweet-form').slideToggle('slow')
+  });
+
+//   // Bounce arrow icons
+//   $(".write-new").hover(function(){
+//     $("#down-arrw-icon").effect( "bounce", {times:3}, 300 );
+//  });
+
+$( '.write-new' ).click( function() {
+  $('#down-arrw-icon').toggleClass('flip');
+});
+
+
 
 
 loadTweets();
@@ -155,22 +122,3 @@ loadTweets();
 
 // end of document ready function
 });
-
-// from lecture....:
-
-// $('form').submit(function(event){
-//   // prevent the default behaviour of html form
-//   event.preventDefault();
-//   const self = this;
-//   // extract data from `this` - the form
-//   const formData = $(this).serialize(); // urlencoded serialization format
-//   // make ajax post with extracted data
-//   $.post('/api/posts', formData)
-//   // if sucess - render updated posts
-//   .then(() => {
-//     // $('form') but that is slightly less performant
-//     $(self)[0].reset();
-//     loadPosts()
-//   })
-//   // else - do nothing; console.error
-//   .catch(err => console.log('err :>> ', err))

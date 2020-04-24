@@ -16,12 +16,6 @@
   
 }
 
-.tweet-body:hover .tweet-right {
-  opacity: 1;
-  color: #adbbed;
-}
-
-
 .tweet-right {
   opacity: 0;
   position: absolute;
@@ -33,10 +27,14 @@
   transition: all 0.5s ease-in;
 }
 
+.tweet-body:hover .tweet-right {
+  opacity: 1;
+  color: #adbbed;
+}
+
 .tweet-header {
   display: flex;
   margin: 25px;
-
 }
 
 .tweet-left {
@@ -52,8 +50,6 @@
   margin-right: 24px;
   font-weight: 300;
 }
-
-
 
 .tweet-content {
   margin: 0px 25px;
@@ -71,17 +67,28 @@
 }
 
 .tweet-date {
-
   font-weight: 300;
   font-size: 20px;
 }
 
-.fas {
+.tweet-icons {
+  opacity: 0;
+  color: #adbbed;
+  transition: all 0.5s ease-in-out;
+}
+
+.tweet-body:hover .tweet-icons {
+  opacity: 1;
+  color: #adbbed;
+}
+
+.tweet-icons .fas {
   transition: all 0.3s ease-in-out;
 }
 
-.fas:hover{
-  color: #adbbed;
+
+.tweet-icons .fas:hover{
+  color: #545149;
   
 }
 

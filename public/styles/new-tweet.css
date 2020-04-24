@@ -6,6 +6,7 @@
 
 .tweet-form {
   width: 100%;
+  display: none;
 }
 
 .tweet-field::placeholder {
@@ -36,7 +37,7 @@
 }
 
 .counter-over {
-  color: red;
+  color: #f8675b;
 }
 
 .button {

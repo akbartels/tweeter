@@ -11,11 +11,16 @@ header.page {
   align-items: center;
 }
 
-
+.user-img {
+  position: relative;
+  z-index: 2;
+}
 
 .user-name {
+  position: relative;
   color: white;
   margin: 0;
+  z-index: 2;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -26,6 +31,8 @@ header.page {
     position: sticky;
     border-radius: 4px;
   }
+
+  
 
 
 }
