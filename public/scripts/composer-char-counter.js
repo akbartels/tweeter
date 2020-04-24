@@ -14,11 +14,11 @@ $(document).ready(function() {
     let newLength = counterNum - $tweetLength;
     $counter.val(`${newLength}`);
     
-    if (newLength < 0 && !$counter.hasClass("counter-over")) {
-      console.log("over");
-      $counter.addClass("counter-over");
-    } else if (newLength >= 0 && $counter.hasClass("counter-over")) {
-      $counter.removeClass("counter-over");
+    if (newLength < 0 && !$counter.hasClass('counter-over')) {
+      console.log('over');
+      $counter.addClass('counter-over');
+    } else if (newLength >= 0 && $counter.hasClass('counter-over')) {
+      $counter.removeClass('counter-over');
     }
   });
 
