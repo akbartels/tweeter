@@ -4,33 +4,32 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(function() {
-  
 
-  // HELPER FUNCTIONS TO CREATE A TWEET AND RENDER ON PAGE
+
+$(document).ready(function() {
  
   // ensures input cannot be used to alter any files
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
-  // loops through all tweets from /tweets route and sends each tweet into createTweetElement()  before rending in the browser.
+  // loops through all tweets from /tweets route and sends each tweet into createTweetElement() before rendering in the browser.
   const renderTweets = function(tweets) {
     const $tweetsContainer = $('#tweets-container');
     for (const tweet of tweets) {
-      console.log(tweet)
+      console.log(tweet);
       $tweetsContainer.prepend(createTweetElement(tweet));
     }
   };
 
   const createTweetElement = function(tweetObj) {
-    const tweetUser = tweetObj.user
-    const tweetContent = tweetObj.content 
-    const tweetCreated = tweetObj.created_at
+    const tweetUser = tweetObj.user;
+    const tweetContent = tweetObj.content;
+    const tweetCreated = tweetObj.created_at;
     const today = Date.now();
-    const daysDifference = Math.round((today - tweetCreated) / (1000 * 3600 * 24))
+    const daysDifference = Math.round((today - tweetCreated) / (1000 * 3600 * 24));
     
     const $tweet = $(`
       <article class="tweet-body hover-tweet">
@@ -57,68 +56,56 @@ $(document).ready(function() {
     return $tweet;
   };
 
- // using jQuery AJAX GET request
+  // using jQuery AJAX GET request
   const loadTweets = function() {
     $('#tweets-container').empty();
     $.getJSON('/tweets')
-    .then(renderTweets)
-  }
+      .then(renderTweets);
+  };
  
-// jQuery AJAX POST request
+  // jQuery AJAX POST request
   $('.tweet-form').submit(function(event) {
     event.preventDefault();
     const formData = $(this).serialize();
 
     const $counter = Number($('.counter')[0].innerText);
-    const $tweetAlert = $('.tweet-alert')
-    const $alertMsg = $('.alert-msg')
+    const $tweetAlert = $('.tweet-alert');
+    const $alertMsg = $('.alert-msg');
     
     if ($counter === 140) {
-      const noText = 'Oops, you forgot to write a message!'
-      $alertMsg.text(`${noText}`)
-      $tweetAlert.slideDown('slow').delay(3000).slideUp('slow')
-      
-      
-      // alert("Oops! You didn't add your message! ");
+      const noText = 'Oops, you forgot to write a message!';
+      $alertMsg.text(`${noText}`);
+      $tweetAlert.slideDown('slow').delay(3000).slideUp('slow');
       return;
+
     } else if ($counter < 0) {
-      const overLmt = 'Oops, you went over the character limit!'
-      $alertMsg.text(`${overLmt}`)
-      $tweetAlert.slideDown('slow').delay(3000).slideUp('slow')
-      
-      
+      const overLmt = 'Oops, you went over the character limit!';
+      $alertMsg.text(`${overLmt}`);
+      $tweetAlert.slideDown('slow').delay(3000).slideUp('slow');
       return;
-    } 
+
+    }
 
     $.post('/tweets', formData)
-    .then(() => {
-      $(this)[0].reset();
-      loadTweets();
-    })
-  })
-
-  // Compose new tweet  
-  $('.write-new').click(function() {
-    $('.tweet-form').slideToggle('slow')
+      .then(() => {
+        $(this)[0].reset();
+        loadTweets();
+      });
   });
 
-//   // Bounce arrow icons
-//   $(".write-new").hover(function(){
-//     $("#down-arrw-icon").effect( "bounce", {times:3}, 300 );
-//  });
+  // Compose new tweet
+  $('.write-new').click(function() {
+    $('.tweet-form').slideToggle('slow');
+  });
 
-$( '.write-new' ).click( function() {
-  $('#down-arrw-icon').toggleClass('flip');
-});
-
-
+  $('.write-new').click(function() {
+    $('#down-arrw-icon').toggleClass('flip');
+  });
 
 
-loadTweets();
-
+  // Main function call to load all existing/new tweets into <main>
+  loadTweets();
 
 
 
-
-// end of document ready function
 });
