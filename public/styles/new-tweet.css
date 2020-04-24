@@ -22,6 +22,7 @@
   border-bottom-width: 3px; 
   height: 84px;
   margin-top: 10px;
+  resize: none;
 }
 
 .tweet-field:focus{
@@ -65,9 +66,7 @@
 .tweet-alert {
   font-weight: 600;
   font-size: large;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
+  display: none;
   height: 35px;
   background-color: #f8675b;
   color: #f4f1ec;
@@ -75,12 +74,13 @@
 }
 
 .alert-msg {
+  display: inline-block;
   flex-grow: 2;
-  margin: 8px, 0px;
+  margin: 0px;
 }
 
 .fa-exclamation {
-  margin: 15px;
+  margin: 8px 15px;
 }
 
 /* .hidden {

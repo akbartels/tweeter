@@ -1,7 +1,7 @@
 
 header.page {
-  background-color: #FFA500;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  background-color: #e09200;
+  background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
   position: relative;
   top: 120px;
   height: 400px;
@@ -11,9 +11,7 @@ header.page {
   align-items: center;
 }
 
-.user-img {
-  
-}
+
 
 .user-name {
   color: white;

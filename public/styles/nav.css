@@ -2,8 +2,8 @@
 .nav-bar {
   
   color: white;
-  background-color: #FFA500;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  background-color: #e09200;
+  background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
   position: fixed;
   width: 100%;
   height: 120px;
@@ -30,7 +30,7 @@
 @media only screen and (min-width: 1024px) {
   .nav-bar {
   background-color: #4056A1;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  background-image: none;
   }
 
   .nav-div {
