@@ -13,10 +13,7 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
+/* Global layout stuff */
 body {
   display: flex;
   flex-direction: column;
@@ -27,10 +24,7 @@ body {
   font-weight: 600;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
+/* Additional CSS can be defined below or in other CSS files */
  main {
   display: flex;
   flex-direction: column;
@@ -52,12 +46,5 @@ body {
     margin: 2%;
     justify-content: flex-end;
   }
-
-  /* header.page {
-
-  } */
-
-  
-
  }
  

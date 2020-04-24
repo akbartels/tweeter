@@ -1,4 +1,7 @@
 
+
+/* STYLING FOR EXISTING TWEETS */
+
 .tweet {
   background-color: #f4f1ec;
 }
@@ -13,16 +16,14 @@
 
 .tweet-body:hover {
   box-shadow: 6px 6px #adbbed;
-  
 }
 
+/* user handle ie: @example */
 .tweet-right {
   opacity: 0;
   position: absolute;
   top: 20px;
   right: 20px;
-  /* display: flex;
-  justify-content: flex-end;  */
   flex-grow: 2;
   transition: all 0.5s ease-in;
 }
@@ -37,6 +38,7 @@
   margin: 25px;
 }
 
+/* user avatar and name */
 .tweet-left {
   display: flex;
 }
@@ -82,6 +84,7 @@
   color: #adbbed;
 }
 
+/* flag, retweet, heart icons  */
 .tweet-icons .fas {
   transition: all 0.3s ease-in-out;
 }
@@ -89,9 +92,4 @@
 
 .tweet-icons .fas:hover{
   color: #545149;
-  
 }
-
-
-
-/* spent 1.75 hrs */

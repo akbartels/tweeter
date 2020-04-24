@@ -1,4 +1,7 @@
 
+
+/* STYLING FOR HEADER */
+
 header.page {
   background-color: #e09200;
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
@@ -31,8 +34,4 @@ header.page {
     position: sticky;
     border-radius: 4px;
   }
-
-  
-
-
 }

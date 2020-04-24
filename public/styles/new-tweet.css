@@ -1,4 +1,7 @@
 
+
+/* STYLING FOR NEW TWEET AREA - COMPOSE, TWEET, COUNTER, ALERT MESSAGES */
+
 .new-tweet {
   margin-bottom: 10px;
   display: flex;
@@ -60,7 +63,6 @@
 .button:hover {
   background-color: #f4f1ec;
   color: #4056A1;
-
 }
 
 
@@ -80,10 +82,7 @@
   margin: 0px;
 }
 
+/* Font awesome exlamation icon */
 .fa-exclamation {
   margin: 8px 15px;
 }
-
-/* .hidden {
-  height: 0px;
-} */
